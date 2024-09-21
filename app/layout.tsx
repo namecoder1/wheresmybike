@@ -1,5 +1,6 @@
 import '@/assets/globals.css'
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
 	title: "Where's My Bike",
@@ -11,6 +12,7 @@ const MainLayout = ({ children }: Readonly<{children: React.ReactNode}>) => {
 		<html>
 			<body>
 				{children}
+				<Analytics />
 			</body>
 		</html>
 	)
